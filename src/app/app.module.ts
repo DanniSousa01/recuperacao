@@ -8,10 +8,16 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { TarefaModalPageModule } from './tarefa-modal/tarefa-modal.module';
-import { IonicStorageModule } from '@ionic/storage';
 
 // Importação do modal
+import { TarefaModalPageModule } from './tarefa-modal/tarefa-modal.module';
+// Importação do Storage
+import { IonicStorageModule } from '@ionic/storage';
+// Importação do modal
+import { PerfilModalPageModule } from './perfil-modal/perfil-modal.module';
+// Importação da camera
+import { Camera } from '@ionic-native/camera/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,12 +27,14 @@ import { IonicStorageModule } from '@ionic/storage';
     IonicModule.forRoot(), 
     AppRoutingModule,
     TarefaModalPageModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    PerfilModalPageModule
   ],
 
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

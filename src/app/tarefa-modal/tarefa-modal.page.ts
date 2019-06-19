@@ -13,7 +13,7 @@ export class TarefaModalPage implements OnInit {
       'horario': '',
     }
    }
-
+   
   ngOnInit() {
   }
 

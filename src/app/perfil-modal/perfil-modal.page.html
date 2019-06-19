@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil Modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--Criação do Formulário-->
+  <ion-list>
+      <ion-item>
+        <ion-label> Nome: </ion-label>
+        <ion-input [(ngModel)]="perfil.nome"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <img src="{{perfil.avatar}}" alt="">
+        <ion-button (click)="take_picture()" slot="end">
+          <ion-icon name="camera"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-button (click)="add()"> Ok</ion-button>
+      <ion-button href='/home'>voltar</ion-button>
+      
+    </ion-list>
+    <!--Fim do Formulário-->
+</ion-content>
