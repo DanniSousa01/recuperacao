@@ -1,16 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>ListaTarefa</ion-title>
+    <ion-title>Lista Tarefa</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> 
-
-
-  
+<ion-content>
+  <ion-card *ngFor="let tarefa of tarefas">
+    <!-- Perfil de usuário 1-->
+    <ion-card-header>
+      <ion-card-title>{{tarefa.tarefa}}</ion-card-title>
+      <ion-card-subtitle>{{tarefa.horario}} Horas</ion-card-subtitle>
+    </ion-card-header>
+    <!--Bottão de excluir-->
+    <ion-item>
+        <ion-icon name="trash" slot="end" (click)="remove(perfil)"></ion-icon>
+      </ion-item>
+    <!-- Fim do card de usuário 1-->
+  </ion-card>
 
   <!--Botão responsavel por criar um modal para cadastro de atividade -->
-  <ion-fab (click)="modal()" class="button-native" vertical="bottom" horizontal="end">
+  <ion-fab (click)="abrir_modal()" class="button-native" vertical="bottom" horizontal="end">
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>

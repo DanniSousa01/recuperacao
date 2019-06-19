@@ -9,6 +9,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TarefaModalPageModule } from './tarefa-modal/tarefa-modal.module';
+import { IonicStorageModule } from '@ionic/storage';
+
 // Importação do modal
 
 @NgModule({
@@ -18,7 +20,8 @@ import { TarefaModalPageModule } from './tarefa-modal/tarefa-modal.module';
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
-    TarefaModalPageModule
+    TarefaModalPageModule,
+    IonicStorageModule.forRoot()
   ],
 
   providers: [
