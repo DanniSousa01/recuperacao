@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>TarefaModal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Cadastro -->
+  <ion-card-content>
+      <ion-item>
+        <ion-label>Tarefa:</ion-label>
+        <ion-input [(ngModel)] = "tarefa.tarefa"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Horário:</ion-label>
+        <ion-input [(ngModel)] = "nova_tarefa.horario"></ion-input>
+      </ion-item>
+  
+      <ion-button expand="block" (click)="add()">OK</ion-button>
+  
+    </ion-card-content>
+
+</ion-content>
